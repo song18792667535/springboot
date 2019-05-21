@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+success
+<table border="1" align="center" width="80%">
+    <tr> <th>编号</th><th>姓名</th><th>价格</th><th>详情</th><th>数量</th></tr>
+    <tr th:each="good:${list}">
+        <td th:text="${good.getGid()}">001</td>
+        <td th:text="${good.getGname()}">abc</td>
+        <td th:text="${good.getPrice()}">23</td>
+        <td th:text="${good.getInfo()}">24</td>
+        <td th:text="${good.getNum()}">25</td>
+    </tr>
+    <tbody>
+    <tr> <td>002</td><td>abcd</td><td>33</td><td>其他</td></tr>
+    <tr> <td>003</td><td>abcde</td><td>43</td><td>其他</td></tr>
+    </tbody>
+</table>
+</body>
+</html>
